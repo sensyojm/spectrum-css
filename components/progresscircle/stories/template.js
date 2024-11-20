@@ -17,7 +17,6 @@ export const Template = ({
 	size = "m",
 	staticColor,
 	isIndeterminate = false,
-	isInField = false,
 	value,
 }) => {
 
