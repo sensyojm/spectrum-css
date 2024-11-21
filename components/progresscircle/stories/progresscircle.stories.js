@@ -22,7 +22,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
-
 			},
 			options: ["white", "black"],
 			control: "select",
