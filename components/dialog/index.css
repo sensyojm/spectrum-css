@@ -152,6 +152,7 @@
 
 	/* Without this, buttons will be stretched */
 	align-items: flex-start;
+	justify-content: space-between;
 
 	box-sizing: border-box;
 
