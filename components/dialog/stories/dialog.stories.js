@@ -323,6 +323,10 @@ Fullscreen.args = {
 };
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	}
 };
 
 // TODO: Because storybook doesn't support for multiple conditionals, we've removed the hasFooter
@@ -344,6 +348,10 @@ export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.storyName = "Fullscreen takeover";
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	}
 };
 FullscreenTakeover.args = {
 	...Default.args,
