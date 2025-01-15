@@ -30,7 +30,6 @@
     "--spectrum-modal-background-color",
     "--spectrum-modal-confirm-border-radius",
     "--spectrum-modal-confirm-entry-animation-delay",
-    "--spectrum-modal-confirm-entry-animation-distance",
     "--spectrum-modal-confirm-entry-animation-duration",
     "--spectrum-modal-confirm-exit-animation-delay",
     "--spectrum-modal-confirm-exit-animation-duration",
@@ -47,6 +46,7 @@
     "--spectrum-animation-ease-in",
     "--spectrum-animation-ease-out",
     "--spectrum-corner-radius-100",
+    "--spectrum-dialog-confirm-entry-animation-distance",
     "--spectrum-gray-100"
   ],
   "system-theme": [],
