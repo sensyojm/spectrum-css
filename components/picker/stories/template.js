@@ -35,7 +35,6 @@ export const Picker = ({
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	const { updateArgs } = context;
 
 	// Use the chevron from the UI icon set for each size, as defined in the design spec.
 	let disclosureIconName = "ChevronDown100";
@@ -64,10 +63,7 @@ export const Picker = ({
 			id=${id}
 			style=${styleMap(customStyles)}
 			type="button"
-			@click=${() => {
-				if (window.isChromatic()) return;
-				updateArgs({ isOpen: !isOpen });
-			}}
+			@click=${onclick}
 			aria-labelledby=${ifDefined(ariaLabeledBy)}
 		>
 			${when(contentIconName, () =>
@@ -195,12 +191,6 @@ export const Template = ({
 				}, context)
 			)}
 		</div>`;
-
-	// Make sure there is a wrapper around sibling components when using the Chromatic
-	// template, so their layout is not affected by the flex and grid layouts used.
-	if (window.isChromatic()) {
-		return html`<div style="position: relative;">${markup}</div>`;
-	}
 	return markup;
 };
 
