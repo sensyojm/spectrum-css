@@ -1,4 +1,10 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { default as ProgressCircle } from "@spectrum-css/progresscircle/stories/progresscircle.stories.js";
+// import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
+import { InfieldProgressCircleGroup } from "./infieldprogresscircle.test.js";
 import { Template } from "./template.js";
 
 /**
@@ -6,28 +12,111 @@ import { Template } from "./template.js";
 */
 
 export default {
-	title: "Components/In-field progress circle",
+	title: "In-field progress circle",
 	component: "InfieldProgressCircle",
 	argTypes: {
 		...ProgressCircle.argTypes,
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl" ],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 	},
 	args: {
 		...ProgressCircle.args,
+		rootClass: "spectrum-InfieldProgresscircle",
 	},
 	parameters: {
-		...ProgressCircle.parameters
+		...ProgressCircle.parameters,
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=14970-6050",
+		},
+		packageJson,
 	}
 };
 
-export const Default = Template.bind({});
+export const Default = InfieldProgressCircleGroup.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = InfieldProgressCircleGroup.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes,
+	},
+};
+
+// ********* DOCS ONLY ********* //
+
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The indeterminate progress circle displays a repeating animation for the inner fill.
+ */
+export const Indeterminate = (args, context) => Sizes({
+	Template: Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Indeterminate.args = {
+	isIndeterminate: true,
+};
+Indeterminate.tags = ["!dev"];
+Indeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteDeterminate = Sizing.bind({});
+StaticWhiteDeterminate.tags = ["!dev"];
+StaticWhiteDeterminate.storyName = "Static white, default";
+StaticWhiteDeterminate.args = {
+	staticColor: "white",
+	isIndeterminate: false,
+};
+StaticWhiteDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteIndeterminate = Sizing.bind({});
+StaticWhiteIndeterminate.tags = ["!dev"];
+StaticWhiteIndeterminate.storyName = "Static white, indeterminate";
+StaticWhiteIndeterminate.args = {
+	staticColor: "white",
+	isIndeterminate: true,
+};
+StaticWhiteIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDeterminate = Sizing.bind({});
+StaticBlackDeterminate.tags = ["!dev"];
+StaticBlackDeterminate.storyName = "Static black, default";
+StaticBlackDeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: false,
+};
+StaticBlackDeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackIndeterminate = Sizing.bind({});
+StaticBlackIndeterminate.tags = ["!dev"];
+StaticBlackIndeterminate.storyName = "Static black, indeterminate";
+StaticBlackIndeterminate.args = {
+	staticColor: "black",
+	isIndeterminate: true,
+};
+StaticBlackIndeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
