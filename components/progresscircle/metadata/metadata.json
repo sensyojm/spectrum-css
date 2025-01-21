@@ -1,6 +1,7 @@
 {
   "sourceFile": "index.css",
   "selectors": [
+    ".spectrum-Circle",
     ".spectrum-ProgressCircle",
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fill",
     ".spectrum-ProgressCircle--sizeL",
@@ -9,6 +10,8 @@
     ".spectrum-ProgressCircle-track",
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticBlack",
     ".spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite",
+    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-innerCircle",
+    ".spectrum-ProgressCircle:not(.spectrum-ProgressCircle--indeterminate) .spectrum-outerCircle",
     "0%",
     "30%",
     "to"
@@ -41,5 +44,8 @@
     "--spectrum-track-color"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-progress-circle-fill-border-color"]
+  "high-contrast": [
+    "--highcontrast-progress-circle-fill-border-color",
+    "--highcontrast-progressbar-track-color"
+  ]
 }

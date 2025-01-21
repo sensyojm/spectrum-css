@@ -4,7 +4,7 @@
 
 ## Progress circle S2 migration
 
-This is the S2 migration of the progress circle. It has changed to an svg element to allow CSS styles such as `stroke-linecap`. This was necessary to match the design.
+This is the S2 migration of the progress circle. The original markup has changed to an svg and circle element to allow CSS styles such as `stroke-linecap`. This was necessary to match the design. The `--small/--medium/--large` sizing classes have been deprecated in favor of t-shirt classes `--sizeS/--sizeM/--sizeL`
 
 The `.spectrum-ProgressCircle--small`, `.spectrum-ProgressCircle--medium`, and `.spectrum-ProgressCircle--large` sizing classes were deprecated and removed from the CSS in favor of the t-shirt sizes.
 
@@ -14,12 +14,6 @@ The `.spectrum-ProgressCircle--small`, `.spectrum-ProgressCircle--medium`, and `
 This animation was created by React Spectrum and used to keep the same speed and bezier curve.
 
 ### Added tokens
-
-`--spectrum-in-field-progress-circle-edge-to-fill`
-`--spectrum-in-field-progress-circle-size-75`
-`--spectrum-in-field-progress-circle-size-100`
-`--spectrum-in-field-progress-circle-size-200`
-`--spectrum-in-field-progress-circle-size-300`
 
 ### Removed styles & mods
 
