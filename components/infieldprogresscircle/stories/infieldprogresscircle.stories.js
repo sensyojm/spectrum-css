@@ -2,7 +2,6 @@ import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { default as ProgressCircle } from "@spectrum-css/progresscircle/stories/progresscircle.stories.js";
-// import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { InfieldProgressCircleGroup } from "./infieldprogresscircle.test.js";
 import { Template } from "./template.js";
