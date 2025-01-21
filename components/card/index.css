@@ -78,7 +78,6 @@
 		--mod-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
 	}
 
-
 	&.spectrum-Card--gallery {
 		--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
 	}
@@ -189,10 +188,10 @@
 
 	/* From QuickAction component that is officially deprecated */
 	pointer-events: auto;
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	box-sizing:border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
 
 	transition:
 		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,

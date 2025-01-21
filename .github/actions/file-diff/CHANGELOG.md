@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#3488](https://github.com/adobe/spectrum-css/pull/3488) [`40c1954`](https://github.com/adobe/spectrum-css/commit/40c1954048f735a07f9edfccf3a568d38164806a) Thanks [@castastrophe](https://github.com/castastrophe)! - Update file table to specify if the file is deleted/moved and indicate the file size has decreased without showing percentages. This update also hardens the way in which the main file is highlighted in the table by checking for exact equals for looking for files "ending with" the file name.
+
 ## 2.0.6
 
 ### Patch Changes
@@ -58,7 +64,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - feat(icon,ui-icons)!: migrate the icon compiler to a distinct package (#2343)([d73d594](https://github.com/adobe/spectrum-css/commit/d73d594)), closes[#2343](https://github.com/adobe/spectrum-css/issues/2343)
 
 ### 🛑 BREAKING CHANGES
- - @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
+
+- @spectrum-css/icon will no longer contain SVG assets; it will be a purely CSS package with all SVG assets migrated to the new @spectrum-css/ui-icons package.
 
 - NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 

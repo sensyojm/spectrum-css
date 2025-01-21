@@ -190,7 +190,7 @@
 	--mod-textfield-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 	--mod-textfield-border-color: var(--spectrum-stepper-border-color);
 
-	&:hover:not(.is-invalid,.is-disabled) {
+	&:hover:not(.is-invalid, .is-disabled) {
 		--mod-infield-button-border-color: var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover));
 	}
 

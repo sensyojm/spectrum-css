@@ -14,7 +14,6 @@
 const { join } = require("path");
 
 module.exports = ({
-	file,
 	resolveImports = true,
 	lint = true,
 	verbose = true,

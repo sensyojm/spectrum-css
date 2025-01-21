@@ -176,7 +176,6 @@
 
 	transition: border-color var(--mod-picker-button-background-animation-duration, var(--spectrum-picker-button-background-animation-duration)) ease-in-out;
 
-
 	.spectrum-PickerButton--right & {
 		border-end-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
 		border-start-start-radius: var(--mod-picker-button-border-radius-sided, var(--spectrum-picker-button-border-radius-sided));
